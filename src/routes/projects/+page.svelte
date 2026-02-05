@@ -17,16 +17,11 @@
 
 	const projects: Project[] = [
 		{
-			name: 'Your Project 1',
-			description: 'Add your open source project description here',
-			language: 'TypeScript',
-			links: [{ label: 'GitHub', url: 'https://github.com/tusharxoxoxo' }]
-		},
-		{
-			name: 'Your Project 2',
-			description: 'Add another project description here',
-			language: 'Rust',
-			links: [{ label: 'GitHub', url: 'https://github.com/tusharxoxoxo' }]
+			name: '6666',
+			description:
+				'A high-performance OLTP database written in OCaml, inspired by TigerBeetle',
+			language: 'OCaml',
+			links: [{ label: 'GitHub', url: 'https://github.com/tusharxoxoxo/6666' }]
 		}
 	];
 
