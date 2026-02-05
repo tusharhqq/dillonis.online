@@ -5,7 +5,7 @@
 		Github,
 		LinkedinIcon,
 		MailPlusIcon,
-		MicVocalIcon,
+		FolderGit2,
 		BookOpenIcon,
 		TwitterIcon,
 		YoutubeIcon
@@ -19,7 +19,7 @@
 		blog: 'gb',
 		youtube: 'gyt',
 		linkedin: 'gli',
-		talks: 'gct',
+		projects: 'gop',
 		email: 'gcm'
 	};
 </script>
@@ -162,17 +162,17 @@
 		</li>
 		<li class="group cursor-none hover:cursor-pointer">
 			<a
-				id="talks"
+				id="projects"
 				class="group/link flex flex-row h-full w-full p-2 focus:outline-none focus:bg-[#313346] gap-2 items-center justify-between hover:bg-[#313346]"
-				href="/talks"
+				href="/projects"
 			>
 				<span class="flex flex-row gap-4 items-center"
-					><MicVocalIcon
+					><FolderGit2
 						class="group-hover:text-ctp-peach group-focus/link:text-ctp-peach"
-					/>Conference Talks</span
+					/>Open Source Projects</span
 				>
 				<span>
-					{#each shortcuts.talks.split('') as char, i}
+					{#each shortcuts.projects.split('') as char, i}
 						{@const currentShortcutSequence = getCurrentShortcutSequence()}
 						<span
 							class={i < currentShortcutSequence.length &&

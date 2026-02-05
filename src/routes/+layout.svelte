@@ -86,7 +86,7 @@
 				gb: 'https://tushard.bearblog.dev/blog/',
 				gyt: 'https://www.youtube.com/@bobo5',
 				gli: 'https://www.linkedin.com/in/dahiya-tushar/',
-				gct: '/talks',
+				gop: '/projects',
 				gcm: 'mailto:tushardzig@gmail.com'
 			};
 			const shortcutKeys = Object.keys(shortcuts);
@@ -94,7 +94,10 @@
 			const mode = getMode(); // Get current mode
 
 			// Always handle Escape/n in INSERT mode to exit
-			if (mode === 'INSERT' && (event.key === 'Escape' || event.key.toLowerCase() === 'n')) {
+			if (
+				mode === 'INSERT' &&
+				(event.key === 'Escape' || event.key.toLowerCase() === 'n')
+			) {
 				event.preventDefault();
 				resetShortcutSequence();
 				// Re-focus previously focused item if applicable and update index state
@@ -186,7 +189,9 @@
 
 			// Handle starting a shortcut sequence in NORMAL mode
 			if (mode === 'NORMAL' && /^[a-z]$/i.test(event.key)) {
-				const potentialStarters = shortcutKeys.filter((s) => s.startsWith(event.key.toLowerCase()));
+				const potentialStarters = shortcutKeys.filter((s) =>
+					s.startsWith(event.key.toLowerCase())
+				);
 				if (potentialStarters.length > 0) {
 					if (focusedItemIdx !== undefined) {
 						menuItems[focusedItemIdx]?.blur();
@@ -216,7 +221,9 @@
 			if (mode === 'INSERT' && /^[a-z]$/i.test(event.key)) {
 				const pressedKey = event.key.toLowerCase();
 				const nextSequence = getCurrentShortcutSequence() + pressedKey;
-				const potentialMatches = shortcutKeys.filter((s) => s.startsWith(nextSequence));
+				const potentialMatches = shortcutKeys.filter((s) =>
+					s.startsWith(nextSequence)
+				);
 
 				if (potentialMatches.length > 0) {
 					updateShortcutSequence(pressedKey);
